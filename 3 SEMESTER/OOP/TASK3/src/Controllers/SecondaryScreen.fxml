@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="779.0" prefWidth="1145.0" style="-fx-background-color: #444444;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SecondaryScreen">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="7.0" prefHeight="755.0" prefWidth="1120.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <TextField fx:id="groupField" layoutX="134.0" layoutY="16.0" prefHeight="31.0" prefWidth="112.0" promptText="PI18E" />
+            <TextField fx:id="semester" layoutX="361.0" layoutY="16.0" prefHeight="31.0" prefWidth="108.0" promptText="1-7" />
+            <TableView fx:id="studentTableView" editable="true" layoutX="28.0" layoutY="75.0" prefHeight="157.0" prefWidth="505.0">
+              <columns>
+                <TableColumn fx:id="studentNameColumn" prefWidth="219.0" text="Name" />
+                <TableColumn fx:id="studentSurnameColumn" prefWidth="285.0" text="Surname" />
+              </columns>
+            </TableView>
+            <TextField fx:id="studentNameInput" layoutX="178.0" layoutY="243.0" prefHeight="31.0" prefWidth="165.0" promptText="Džiugas" />
+            <TextField fx:id="studentSurnameInput" layoutX="178.0" layoutY="279.0" prefHeight="31.0" prefWidth="165.0" promptText="Pečiulevičius" />
+            <Button fx:id="deleteStudentButton" layoutX="357.0" layoutY="240.0" mnemonicParsing="false" onAction="#deleteStudentAction" prefHeight="33.0" prefWidth="165.0" style="-fx-border-color: #000; -fx-background-color: #AB4642; -fx-text-fill: #FFFFFF; -fx-background-radius: 4;" text="Delete Student" />
+            <Button fx:id="addStudentButton" layoutX="357.0" layoutY="276.0" mnemonicParsing="false" onAction="#addStudentAction" prefHeight="33.0" prefWidth="165.0" style="-fx-border-color: #000; -fx-font-weight: 700; -fx-background-color: #7cafc2; -fx-text-fill: #FFFFFF; -fx-background-radius: 4;" text="Add Student" />
+            <TableView fx:id="subjectTableView" editable="true" layoutX="28.0" layoutY="343.0" prefHeight="188.0" prefWidth="505.0">
+               <columns>
+                  <TableColumn fx:id="subjectsColumn" minWidth="0.0" prefWidth="326.0" text="Subjects" />
+                  <TableColumn fx:id="creditsColumn" prefWidth="178.0" text="Credits" />
+               </columns>
+            </TableView>
+            <TextField fx:id="subjectNameInput" layoutX="178.0" layoutY="540.0" prefHeight="31.0" prefWidth="165.0" promptText="OOP" />
+            <TextField fx:id="subjectCreditsInput" layoutX="178.0" layoutY="579.0" prefHeight="31.0" prefWidth="165.0" promptText="6" />
+            <Button fx:id="deleteSubjectButton" layoutX="361.0" layoutY="535.0" mnemonicParsing="false" onAction="#deleteSubjectAction" prefHeight="33.0" prefWidth="165.0" style="-fx-border-color: #000; -fx-background-color: #AB4642; -fx-text-fill: #FFFFFF; -fx-background-radius: 4;" text="Delete Subject" />
+            <Button fx:id="addSubjectButton" layoutX="361.0" layoutY="575.0" mnemonicParsing="false" onAction="#addSubjectAction" prefHeight="33.0" prefWidth="165.0" style="-fx-border-color: #000; -fx-font-weight: 700; -fx-background-color: #7cafc2; -fx-text-fill: #FFFFFF; -fx-background-radius: 4;" text="Add Subject" />
+            <Button fx:id="clearFieldsButton" layoutX="182.0" layoutY="637.0" mnemonicParsing="false" onAction="#clearFieldsAction" prefHeight="33.0" prefWidth="173.0" style="-fx-border-color: #000; -fx-background-color: #AB4642; -fx-text-fill: #FFFFFF;" text="Clear fields" />
+            <Button fx:id="addGroupButton" layoutX="359.0" layoutY="637.0" mnemonicParsing="false" onAction="#addGroupAction" prefHeight="27.0" prefWidth="173.0" style="-fx-border-color: #000; -fx-background-color: #7cafc2; -fx-text-fill: #FFFFFF; -fx-background-radius: 4;" text="Add group">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="confirmSelectionButton" layoutX="832.0" layoutY="145.0" mnemonicParsing="false" onAction="#confirmSelectionAction" prefHeight="33.0" prefWidth="213.0" style="-fx-border-color: #000; -fx-background-color: #86B175; -fx-text-fill: #FFFFFF; -fx-background-radius: 4;" text="Confirm" />
+            <Label fx:id="studentGradesOutput" layoutX="776.0" layoutY="189.0" prefHeight="33.0" prefWidth="272.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="gradeSelect" layoutX="776.0" layoutY="241.0" prefHeight="31.0" prefWidth="272.0" />
+            <Button fx:id="deleteGradeButton" layoutX="839.0" layoutY="290.0" mnemonicParsing="false" onAction="#deleteGradeAction" prefHeight="33.0" prefWidth="213.0" style="-fx-border-color: #000; -fx-background-color: #AB4642; -fx-text-fill: #FFFFFF; -fx-background-radius: 4;" text="Delete chosen" />
+            <TextField fx:id="gradeInput" layoutX="751.0" layoutY="339.0" prefHeight="31.0" prefWidth="303.0" promptText="1-10" />
+            <Button fx:id="addGradeButton" layoutX="839.0" layoutY="385.0" mnemonicParsing="false" onAction="#addGradeAction" prefHeight="33.0" prefWidth="213.0" style="-fx-border-color: #000; -fx-background-color: #7cafc2; -fx-background-radius: 4; -fx-text-fill: #FFFFFF;" text="Add grade" />
+            <Label fx:id="studentAverageOutput" layoutX="773.0" layoutY="448.0" prefHeight="33.0" prefWidth="272.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="groupAverageOutput" layoutX="773.0" layoutY="493.0" prefHeight="33.0" prefWidth="272.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ListView fx:id="top3List" layoutX="773.0" layoutY="560.0" prefHeight="104.0" prefWidth="272.0" style="-fx-background-color: #444444;" />
+            <Button fx:id="exitButton" layoutX="933.0" layoutY="711.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="33.0" prefWidth="173.0" style="-fx-border-color: #000; -fx-background-color: #AB4642; -fx-text-fill: #FFFFFF; -fx-background-radius: 4;" text="Exit" />
+            <Text fill="#e8e8e8" layoutX="18.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group name:" wrappingWidth="149.35546875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e8e8" layoutX="274.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semester: " wrappingWidth="112.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e8e8" layoutX="25.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student surname:" wrappingWidth="165.35546875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e8e8" layoutX="578.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a student:" wrappingWidth="149.35546875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e8e8" layoutX="27.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject name:" wrappingWidth="130.35546875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e8e8" layoutX="25.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject credits:" wrappingWidth="165.35546875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="579.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a grade to delete:" wrappingWidth="226.91796875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="579.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group TOP3:">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="582.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group average:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="580.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student average:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="579.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add a grade:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="583.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student grades:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Separator layoutX="553.0" opacity="0.51" orientation="VERTICAL" prefHeight="684.0" prefWidth="0.0" style="-fx-background-color: #e8e8e8;" />
+            <Separator layoutX="25.0" layoutY="59.0" prefHeight="4.0" prefWidth="511.0" />
+            <Separator layoutX="19.0" layoutY="620.0" prefHeight="4.0" prefWidth="511.0" />
+            <Separator layoutX="19.0" layoutY="324.0" prefHeight="4.0" prefWidth="511.0" />
+            <Separator layoutX="12.0" layoutY="696.0" prefHeight="4.0" prefWidth="1097.0" />
+            <Text fill="#e8e8e8" layoutX="27.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student name:" wrappingWidth="130.35546875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#e8e8e8" layoutX="580.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a subject:" wrappingWidth="149.35546875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Separator layoutX="579.0" layoutY="187.0" prefHeight="4.0" prefWidth="470.0" />
+            <Separator layoutX="579.0" layoutY="435.0" prefHeight="4.0" prefWidth="470.0" />
+            <Text fill="#e8e8e8" layoutX="580.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a group:" wrappingWidth="149.35546875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="groupSelect" layoutX="773.0" layoutY="23.0" onAction="#groupSelectAction" prefHeight="31.0" prefWidth="272.0" />
+            <ComboBox fx:id="studentSelect" layoutX="773.0" layoutY="60.0" onAction="#studentSelectAction" prefHeight="31.0" prefWidth="272.0" />
+            <ComboBox fx:id="subjectSelect" layoutX="773.0" layoutY="96.0" onAction="#subjectSelectAction" prefHeight="31.0" prefWidth="272.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

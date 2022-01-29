@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="1252.0" style="-fx-background-color: transparent;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UsersWindowController">
+   <children>
+      <StackPane layoutX="364.0" layoutY="205.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="653.0" prefWidth="942.0">
+               <children>
+                  <VBox style="-fx-background-color: FE9992;" HBox.hgrow="ALWAYS" />
+                  <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <StackPane.margin>
+                  <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+               </StackPane.margin>
+               <children>
+                  <AnchorPane prefHeight="631.0" prefWidth="1142.0" style="-fx-background-color: white;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Separator layoutX="22.0" layoutY="58.0" prefHeight="0.0" prefWidth="1098.0" style="-fx-background-color: #3B969B;" />
+                        <Text fill="WHITE" layoutX="22.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 2em; -fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #3B969B;" text="MANAGER APPLICATION (BRAND)" />
+                        <Button fx:id="managersWindowButton" layoutX="805.0" layoutY="11.0" mnemonicParsing="false" onAction="#openManagersWindowAction" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #3B969B; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Managers" />
+                        <Button fx:id="usersButtonClicked" layoutX="696.0" layoutY="11.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #2f787c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Users">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <Button fx:id="ordersWindowButton" layoutX="1020.0" layoutY="11.0" mnemonicParsing="false" onAction="#openOrdersWindowAction" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #3B969B; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Orders" />
+                        <Button fx:id="itemsWindowButton" layoutX="913.0" layoutY="11.0" mnemonicParsing="false" onAction="#openItemsWindowAction" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #3B969B; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Items" />
+                        <TableView layoutX="28.0" layoutY="96.0" prefHeight="374.0" prefWidth="1088.0">
+                          <columns>
+                            <TableColumn prefWidth="197.0" text="Users" />
+                            <TableColumn prefWidth="220.0" text="Items" />
+                              <TableColumn prefWidth="207.0" text="Country" />
+                              <TableColumn prefWidth="175.0" text="City" />
+                              <TableColumn prefWidth="288.0" text="Address" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+   </children>
+</AnchorPane>
