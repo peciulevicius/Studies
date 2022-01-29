@@ -1,0 +1,5 @@
+TASK 1: https://github.com/dziugaspeciulevicius/Artificial-Intelligence-Task1-data-recovery
+TASK 2: https://github.com/dziugaspeciulevicius/Artificial-Intelligence-Task2-KNN-Algorithm
+TASK 3: https://github.com/dziugaspeciulevicius/Artificial-Intelligence-Task3-Naive-Bayes
+TASK 4: https://github.com/dziugaspeciulevicius/Artificial-Intelligence-Task4-Clustering
+TASK 5: https://github.com/dziugaspeciulevicius/Artificial-Intelligence-Task5-Iris-Data-Clusterization
