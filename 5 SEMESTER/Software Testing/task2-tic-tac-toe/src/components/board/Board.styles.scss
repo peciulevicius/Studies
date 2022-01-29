@@ -1,0 +1,27 @@
+.board3x3 {
+    border: '5px solid blue';
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+.board4x4 {
+    border: '5px solid blue';
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+.board5x5 {
+    border: '5px solid blue';
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+}
