@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="739.0" style="-fx-background-color: #A4A4A2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Encrypt">
+   <children>
+      <TextArea fx:id="plainText" layoutX="56.0" layoutY="234.0" prefHeight="227.0" prefWidth="262.0" promptText="Enter plaintext here" wrapText="true" />
+      <Button fx:id="encryptButton" layoutX="340.0" layoutY="253.0" mnemonicParsing="false" onAction="#encryptAction" style="-fx-background-color: #E68FAD;" text="Encrypt" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Text fill="WHITE" layoutX="50.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encrypt using AES algorithm">
+         <font>
+            <Font size="22.0" />
+         </font></Text>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="68.0" prefWidth="739.0" style="-fx-background-color: #E68FAD;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="212.0" style="-fx-background-color: #A4A4A2;" text="Encrypt" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#openDecryptWindow" prefHeight="54.0" prefWidth="195.0" style="-fx-background-color: #81817F;" text="Decrypt" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets top="5.0" />
+         </opaqueInsets>
+      </HBox>
+      <TextArea fx:id="outputArea" layoutX="455.0" layoutY="129.0" prefHeight="330.0" prefWidth="240.0" promptText="Output" wrapText="true" />
+      <TextField fx:id="keyField" alignment="CENTER" layoutX="56.0" layoutY="184.0" prefHeight="31.0" prefWidth="262.0" promptText="Enter key here" />
+   </children>
+</AnchorPane>
