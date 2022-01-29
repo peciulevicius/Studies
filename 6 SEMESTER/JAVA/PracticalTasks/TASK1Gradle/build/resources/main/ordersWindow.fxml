@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="1527.0" style="-fx-background-color: transparent;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OrdersWindowController">
+   <children>
+      <StackPane layoutX="364.0" layoutY="205.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="653.0" prefWidth="942.0">
+               <children>
+                  <VBox style="-fx-background-color: FE9992;" HBox.hgrow="ALWAYS" />
+                  <VBox style="-fx-background-color: white;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <StackPane.margin>
+                  <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+               </StackPane.margin>
+               <children>
+                  <AnchorPane prefHeight="563.0" prefWidth="1310.0" style="-fx-background-color: white;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Separator layoutX="22.0" layoutY="61.0" prefHeight="0.0" prefWidth="1372.0" style="-fx-background-color: #3B969B;" />
+                        <Text fill="WHITE" layoutX="22.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 2em; -fx-font-family: Quicksand; -fx-font-weight: bold; -fx-fill: #3B969B;" text="MANAGER APPLICATION [ORDERS]" />
+                        <Button fx:id="managersWindowButton" layoutX="1062.0" layoutY="16.0" mnemonicParsing="false" onAction="#openManagersWindowAction" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #3B969B; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Managers" />
+                        <Button fx:id="usersWindowButton" layoutX="953.0" layoutY="16.0" mnemonicParsing="false" onAction="#openUsersWindowAction" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #3B969B; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Users" />
+                        <Button fx:id="orderButtonClicked" layoutX="1277.0" layoutY="16.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #2f787c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Orders">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="itemsWindowButton" layoutX="1170.0" layoutY="16.0" mnemonicParsing="false" onAction="#openItemsWindowAction" prefHeight="38.0" prefWidth="101.0" style="-fx-background-color: #3B969B; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Items" />
+                        <TableView fx:id="orderTable" layoutX="36.0" layoutY="95.0" prefHeight="374.0" prefWidth="1346.0">
+                          <columns>
+                            <TableColumn fx:id="firstNameColumn" prefWidth="138.0" text="First Name" />
+                              <TableColumn fx:id="lastNameColumn" minWidth="0.0" prefWidth="196.0" text="Last Name" />
+                              <TableColumn fx:id="countryColumn" prefWidth="207.0" text="Country" />
+                              <TableColumn fx:id="cityColumn" prefWidth="175.0" text="City" />
+                              <TableColumn fx:id="addressColumn" prefWidth="185.0" text="Address" />
+                              <TableColumn fx:id="apartmentColumn" prefWidth="128.0" text="Apartment" />
+                              <TableColumn fx:id="postalCodeColumn" prefWidth="173.0" text="Postal Code" />
+                            <TableColumn fx:id="itemsColumn" prefWidth="143.0" text="Items" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="deleteButton" layoutX="632.0" layoutY="493.0" mnemonicParsing="false" onAction="#deleteOrderAction" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #c46964; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 50px;" text="Delete order" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+   </children>
+</AnchorPane>
