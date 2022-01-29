@@ -1,0 +1,85 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>hastebin - aqikeyipos</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="scripts%20for%20pw2%20%20num2_files/solarized_dark.css">
+<link rel="stylesheet" type="text/css" href="scripts%20for%20pw2%20%20num2_files/application.css">
+<script type="text/javascript" src="scripts%20for%20pw2%20%20num2_files/jquery.js"></script>
+<script type="text/javascript" src="scripts%20for%20pw2%20%20num2_files/highlight.js"></script>
+<script type="text/javascript" src="scripts%20for%20pw2%20%20num2_files/application.js"></script>
+<meta name="robots" content="noindex,nofollow">
+<script type="text/javascript">
+			var app = null;
+			// Handle pops
+			var handlePop = function(evt) {
+				var path = evt.target.location.pathname;
+				if (path === '/') { app.newDocument(true); }
+				else { app.loadDocument(path.substring(1, path.length)); }
+			};
+			// Set up the pop state to handle loads, skipping the first load
+			// to make chrome behave like others:
+			// http://code.google.com/p/chromium/issues/detail?id=63040
+			setTimeout(function() {
+				window.onpopstate = function(evt) {
+					try { handlePop(evt); } catch(err) { /* not loaded yet */ }
+				};
+			}, 1000);
+			// Construct app and load initial path
+			$(function() {
+				app = new haste('hastebin', { twitter: true });
+				handlePop({ target: window });
+			});
+		</script>
+</head>
+<body>
+<ul id="messages"></ul>
+<div id="key">
+
+<div id="box1">
+<a href="https://hastebin.com/about.md" class="logo"></a>
+</div>
+<div id="box2">
+<button class="save function button-picture">Save</button>
+<button class="new function button-picture enabled">New</button>
+<button class="duplicate function button-picture enabled">Duplicate &amp; Edit</button>
+<button class="raw function button-picture enabled">Just Text</button>
+<button class="twitter function button-picture enabled">Twitter<div id="pointer" style="display: none;"></div></button>
+</div>
+<div id="box3" style="display: none;">
+<div class="label">Twitter</div>
+<div class="shortcut">control + shift + t</div>
+</div>
+</div>
+<div id="linenos">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br></div>
+<pre id="box" style="" class="hljs" tabindex="0"><code><span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> line
+	<span class="hljs-keyword">do</span>
+		<span class="hljs-built_in">echo</span> <span class="hljs-string">"Adding <span class="hljs-variable">$line</span>"</span>
+		arguments=( <span class="hljs-variable">$line</span> )
+	name=<span class="hljs-variable">${arguments[0]}</span>
+	lastname=<span class="hljs-variable">${arguments[1]}</span>
+	surname=<span class="hljs-variable">${arguments[2]}</span>
+	fullname=<span class="hljs-string">""</span>
+	<span class="hljs-keyword">if</span> [ surname = <span class="hljs-string">""</span> ] 
+	<span class="hljs-keyword">then</span>
+		surname=<span class="hljs-variable">$lastname</span>
+		fullname=<span class="hljs-string">"<span class="hljs-variable">$name</span>.<span class="hljs-variable">$surname</span>"</span>
+	<span class="hljs-keyword">else</span>
+		fullname=<span class="hljs-string">"<span class="hljs-variable">$name</span>-<span class="hljs-variable">$lastname</span>.<span class="hljs-variable">$surname</span>"</span>
+	<span class="hljs-keyword">fi</span>
+
+	home=<span class="hljs-string">"/home/students/<span class="hljs-variable">$ou</span>/<span class="hljs-variable">$fullname</span>"</span>
+
+	<span class="hljs-keyword">if</span> [ ! -d <span class="hljs-variable">$home</span> ]
+	<span class="hljs-keyword">then</span>
+		mkdir <span class="hljs-variable">$home</span>
+		chmod 700 -R <span class="hljs-variable">$home</span>
+
+		useradd -b <span class="hljs-string">"/home/students/<span class="hljs-variable">$ou</span>"</span> -d <span class="hljs-variable">$home</span> -G <span class="hljs-variable">$OU</span>,students -p <span class="hljs-string">"linuxPower"</span> <span class="hljs-variable">$name</span>
+	<span class="hljs-keyword">else</span>
+		<span class="hljs-built_in">echo</span> <span class="hljs-string">"User <span class="hljs-variable">$name</span> already exists"</span>
+	<span class="hljs-keyword">fi</span>
+	<span class="hljs-keyword">done</span> &lt; users.txt</code></pre>
+<textarea spellcheck="false" style="display:none;"></textarea>
+
+
+</body></html>
