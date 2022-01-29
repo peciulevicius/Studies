@@ -1,0 +1,4 @@
+﻿  Source.c
+c:\users\dziug\onedrive\desktop\code\algorithms-and-data-structures-classwork\project\project\source.c(191): warning C4098: 'Menu': 'void' function returning a value
+c:\users\dziug\onedrive\desktop\code\algorithms-and-data-structures-classwork\project\project\source.c(201): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Project.vcxproj -> C:\Users\Dziug\OneDrive\Desktop\CODE\Algorithms-And-Data-Structures-Classwork\Project\x64\Debug\Project.exe
